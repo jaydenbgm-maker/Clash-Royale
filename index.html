@@ -130,5 +130,33 @@
       <div style="color:var(--muted)">Images used should follow Supercell's Fan Content Policy.</div>
     </div>
   </footer>
+  <script>
+    // Simple drag & drop for deck builder
+    const cards = document.querySelectorAll('.deck-card');
+    const deckArea = document.getElementById('deck-area');
+
+    cards.forEach(card => {
+      card.setAttribute('draggable', 'true');
+      card.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', card.src);
+      });
+    });
+
+    deckArea.addEventListener('dragover', e => {
+      e.preventDefault();
+    });
+
+    deckArea.addEventListener('drop', e => {
+      e.preventDefault();
+      const src = e.dataTransfer.getData('text/plain');
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.width = '72px';
+      img.style.height = '96px';
+      img.style.borderRadius = '6px';
+      img.style.objectFit = 'cover';
+      deckArea.appendChild(img);
+    });
+  </script>
 </body>
 </html>
