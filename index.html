@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clash Royale Academy</title>
+  <style>
+    :root{--accent:#ffcc00;--bg:#0b1220;--card:#0f1724;--muted:#9aa6b2}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071023 0%, #07182b 100%);color:#e6f0ff}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.03);backdrop-filter:blur(4px)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{height:44px}
+    nav a{color:inherit;text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;padding:48px 24px;align-items:center}
+    .hero h1{font-size:clamp(28px,4.4vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{display:inline-block;background:var(--accent);color:#051827;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:24px}
+    .lesson{background:var(--card);padding:14px;border-radius:10px}
+    .lesson img{width:100%;border-radius:8px;height:140px;object-fit:cover}
+    footer{padding:18px 24px;color:var(--muted);font-size:14px}
+
+    /* small screens */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.brand img{height:38px}} 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- Replace the src with a real Clash Royale logo from e.g. Supercell Fankit or the Clash Royale Wiki -->
+      <img src="https://example.com/clash-royale-logo.png" alt="Clash Royale logo" />
+      <div>
+        <strong>Clash Royale Academy</strong>
+        <div style="font-size:12px;color:var(--muted)">Learn decks, mechanics & strategy</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#lessons">Lessons</a>
+      <a href="#decks">Decks</a>
+      <a href="#glossary">Glossary</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Master Clash Royale — from basics to pro play</h1>
+        <p>Short lessons, interactive deck builder (demo), card counters, and replay analysis tips so you start winning more matches today.</p>
+        <a class="btn" href="#lessons">Start Learning</a>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="min-width:180px"><strong>Beginner</strong><div style="color:var(--muted);font-size:13px">Learn elixir, lanes, and fundamentals</div></div>
+          <div class="card" style="min-width:180px"><strong>Intermediate</strong><div style="color:var(--muted);font-size:13px">Timing, card interactions, and cycles</div></div>
+          <div class="card" style="min-width:180px"><strong>Advanced</strong><div style="color:var(--muted);font-size:13px">Meta decks, counterplay, and tournament tips</div></div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <!-- Example hero image: replace with an official splash or card render from the web -->
+        <img src="https://example.com/royale-hero-splash.jpg" alt="Clash Royale battlefield" style="width:100%;border-radius:10px;object-fit:cover;margin-bottom:12px" />
+        <h3 style="margin:0 0 6px">Featured lesson</h3>
+        <div style="color:var(--muted);font-size:14px">How to trade elixir efficiently — small pushes that snowball into wins.</div>
+      </aside>
+    </section>
+
+    <section id="lessons" style="padding:6px 24px 28px">
+      <h2 style="margin-top:6px">Lessons</h2>
+      <div class="grid">
+        <article class="lesson">
+          <!-- Replace with a card render of a troop from the Clash Royale Wiki or Supercell fankit -->
+          <img src="https://example.com/card-goblin.png" alt="Goblin card" />
+          <h4>Card fundamentals</h4>
+          <p style="color:var(--muted);font-size:14px">Read the card: range, hitpoints, damage, and role.</p>
+        </article>
+
+        <article class="lesson">
+          <img src="https://example.com/card-tank.png" alt="Tank card" />
+          <h4>Tank & support synergies</h4>
+          <p style="color:var(--muted);font-size:14px">How to pair tanks with splash or support to maximize value.</p>
+        </article>
+
+        <article class="lesson">
+          <img src="https://example.com/card-spell.png" alt="Spell card" />
+          <h4>Spell timing</h4>
+          <p style="color:var(--muted);font-size:14px">When to save spells and when to use them proactively.</p>
+        </article>
+
+        <article class="lesson">
+          <img src="https://example.com/replay-analysis.jpg" alt="Replay analysis" />
+          <h4>Replay analysis</h4>
+          <p style="color:var(--muted);font-size:14px">What to watch for when reviewing your matches.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="decks" style="padding:0 24px 28px">
+      <h2>Deck builder (demo)</h2>
+      <div class="card" style="padding:18px;margin-top:12px">
+        <p style="color:var(--muted);margin:0 0 12px">Drag cards from a list into your deck. This demo uses static images — replace the image src values below with real card image URLs from the web for production.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <!-- Static demo thumbnails -->
+          <img src="https://example.com/card1.png" alt="card" style="width:72px;height:96px;border-radius:6px;object-fit:cover" />
+          <img src="https://example.com/card2.png" alt="card" style="width:72px;height:96px;border-radius:6px;object-fit:cover" />
+          <img src="https://example.com/card3.png" alt="card" style="width:72px;height:96px;border-radius:6px;object-fit:cover" />
+          <img src="https://example.com/card4.png" alt="card" style="width:72px;height:96px;border-radius:6px;object-fit:cover" />
+        </div>
+      </div>
+    </section>
+
+    <section id="glossary" style="padding:0 24px 48px">
+      <h2>Glossary</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px">
+        <div class="card"><strong>Elixir</strong><div style="color:var(--muted);font-size:13px">Resource used to play cards.</div></div>
+        <div class="card"><strong>Cycle</strong><div style="color:var(--muted);font-size:13px">How quickly you can return to a key card.</div></div>
+        <div class="card"><strong>Push</strong><div style="color:var(--muted);font-size:13px">An attack grouping of cards.</div></div>
+      </div>
+    </section>
+
+    <section id="about" style="padding:0 24px 64px">
+      <h2>About this site</h2>
+      <p style="color:var(--muted);max-width:760px">This is a lightweight starter template for a Clash Royale teaching website. It intentionally uses <em>external</em> images so you can point to real card renders, splash art, and logos hosted by Supercell or community resources. See the chat message for links to official asset sources.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© Clash Royale Academy — fan resource</div>
+      <div style="color:var(--muted)">Images used should follow Supercell's Fan Content Policy.</div>
+    </div>
+  </footer>
+</body>
+</html>
